@@ -29,7 +29,7 @@
                 <version>${mule.maven.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <cloudHub2Deployment>
+                    <cloudhub2Deployment>
                         <uri>https://anypoint.mulesoft.com</uri>
                         <muleVersion>${app.runtime}</muleVersion>
                         <connectedAppClientId>${anypoint.client.id}</connectedAppClientId>
@@ -40,7 +40,7 @@
                         <applicationName>${mule.app.name}</applicationName>
                         <replicas>1</replicas>
                         <vCores>0.1</vCores>
-                    </cloudHub2Deployment>
+                    </cloudhub2Deployment>
                 </configuration>
             </plugin>
         </plugins>
