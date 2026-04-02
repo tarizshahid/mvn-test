@@ -99,7 +99,10 @@ jobs:
       - name: Deploy to Anypoint Platform
         run: |
           mvn deploy -DmuleDeploy -U -e \
-            -Danypoint.client.id=$ANYPOINT_CLIENT_ID \
-            -Danypoint.client.secret=$ANYPOINT_CLIENT_SECRET \
+            -Danypoint.client.id=$CLIENT_ID \
+            -Danypoint.client.secret=$CLIENT_SECRET \
+            -Danypoint.env=$ANYPOINT_ENV \
+            -Danypoint.org.id=$ANYPOINT_ORG_ID \
+            -Dmule.app.name=$MULE_APP_NAMET \
             -Danypoint.env=$ANYPOINT_ENV \
             -Dmule.app.name=$MULE_APP_NAME
