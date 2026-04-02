@@ -1,0 +1,29 @@
+# ── Anypoint Studio internals — NEVER commit these ────────
+.mule/
+.metadata/
+.classpath
+.project
+.settings/
+
+# ── Maven build output ────────────────────────────────────
+target/
+
+# ── OS junk ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Java ──────────────────────────────────────────────────
+*.class
+*.jar
+*.war
+*.ear
+
+# ── Logs ──────────────────────────────────────────────────
+*.log 
+.mule/ 
+.metadata/ 
+.classpath 
+.project 
+.settings/ 
+target/ 
+.tooling/ 
