@@ -91,7 +91,7 @@ jobs:
           name: mule-artifact
 
       - name: Deploy to Anypoint Platform
-        run: mvn deploy -DmuleDeploy
+        run: mvn deploy -DmuleDeploy -U
         env:
           ANYPOINT_CLIENT_ID: ${{ env.ANYPOINT_CLIENT_ID }}
           ANYPOINT_CLIENT_SECRET: ${{ env.ANYPOINT_CLIENT_SECRET }}
