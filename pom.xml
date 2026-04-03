@@ -23,33 +23,36 @@
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>3.2.0</version>
             </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.1.2</version>
+            </plugin>
+
             <plugin>
                 <groupId>org.mule.tools.maven</groupId>
                 <artifactId>mule-maven-plugin</artifactId>
                 <version>${mule.maven.plugin.version}</version>
                 <extensions>true</extensions>
-                  <configuration>
-                          <cloudhub2Deployment>
-                              <uri>https://anypoint.mulesoft.com</uri>
-                              
-                              <server>anypoint-exchange-v3</server> 
-                              
-                              <provider>MC</provider>
-                              <environment>${anypoint.env}</environment>
-                              
-                              <businessGroupId>${anypoint.org.id}</businessGroupId> 
-                              
-                              <target>Cloudhub-US-East-2</target> 
-                              
-                              <muleVersion>4.11.2</muleVersion> <applicationName>${mule.app.name}</applicationName>
-                              
-                              <replicas>1</replicas>
-                              <vCores>0.1</vCores>
-                          </cloudhub2Deployment>
-                      </configuration>
+                <configuration>
+                    <cloudhub2Deployment>
+                        <uri>https://anypoint.mulesoft.com</uri>
+                        <server>anypoint-exchange-v3</server>
+                        <provider>MC</provider>
+                        <environment>${anypoint.env}</environment>
+                        <businessGroupId>${anypoint.org.id}</businessGroupId>
+                        <target>Cloudhub-US-East-2</target>
+                        <muleVersion>4.11.2</muleVersion> 
+                        <applicationName>${mule.app.name}</applicationName>
+                        <replicas>1</replicas>
+                        <vCores>0.1</vCores>
+                    </cloudhub2Deployment>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+    
     <distributionManagement>
         <repository>
             <id>anypoint-exchange-v3</id>
@@ -58,6 +61,7 @@
             <layout>default</layout>
         </repository>
     </distributionManagement>
+    
     <dependencies>
         <dependency>
             <groupId>org.mule.connectors</groupId>
