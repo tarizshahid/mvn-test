@@ -41,7 +41,7 @@
                               
                               <target>Cloudhub-US-East-2</target> 
                               
-                              <muleVersion>4.8.0</muleVersion> <applicationName>${mule.app.name}</applicationName>
+                              <muleVersion>4.11.2</muleVersion> <applicationName>${mule.app.name}</applicationName>
                               
                               <replicas>1</replicas>
                               <vCores>0.1</vCores>
