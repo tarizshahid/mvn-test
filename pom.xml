@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>6d20974e-34c3-4c3e-98a0-390e788adff0</groupId>
     <artifactId>cicd-mvn-complete</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>mule-application</packaging>
     <name>cicd-mvn-complete</name>
 
@@ -39,7 +39,7 @@
                               
                               <businessGroupId>${anypoint.org.id}</businessGroupId> 
                               
-                              <target>cloudhub-us-east-2</target> 
+                              <target>Cloudhub-US-East-2</target> 
                               
                               <muleVersion>4.11.2</muleVersion> <applicationName>${mule.app.name}</applicationName>
                               
@@ -50,7 +50,14 @@
             </plugin>
         </plugins>
     </build>
-
+    <distributionManagement>
+        <repository>
+            <id>anypoint-exchange-v3</id>
+            <name>Anypoint Exchange</name>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/6d20974e-34c3-4c3e-98a0-390e788adff0/maven</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>org.mule.connectors</groupId>
